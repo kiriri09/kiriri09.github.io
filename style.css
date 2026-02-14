@@ -74,7 +74,6 @@
     }
 
     .fondo {
-        /* 1. Ocupar toda la pantalla */
         position: fixed;
         top: 0;
         left: 0;
@@ -112,7 +111,6 @@
     animation: fadeIn 0.8s ease;
     }
 
-    /* El bloque blanco (la tarjeta) del inicio */
     .card3 {
         background-color: white;
         border-radius: 15px;
@@ -247,7 +245,6 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
-    /* Animación de levitación */
     @keyframes floating {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
@@ -279,20 +276,19 @@
       }
     }
 
-    /* La clase para la nueva lluvia */
     .custom-rain-item {
     position: fixed;
     top: -50px;
     z-index: 999;
     pointer-events: none;
-    animation: fall linear forwards; /* Usa la misma animación 'fall' que tus corazones */
+    animation: fall linear forwards; 
     }
 
-    /* Si no tienes definida la animación 'fall' en tu CSS, añádela así: */
     @keyframes fall {
     to {
         transform: translateY(110vh) rotate(360deg);
     }
     }
+
 
 
