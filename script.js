@@ -117,17 +117,16 @@ function startCustomRain() {
     
     element.src = "img/fiesta.png"; 
     
-    element.classList.add("custom-rain-item"); // Usamos una clase nueva
+    element.classList.add("custom-rain-item");
     element.style.left = Math.random() * 90 + "vw";
-    element.style.width = (30 + Math.random() * 20) + "px"; // Un poco más grandes si quieres
-    element.style.animationDuration = (3 + Math.random() * 3) + "s"; // Velocidad distinta
+    element.style.width = (30 + Math.random() * 20) + "px"; 
+    element.style.animationDuration = (3 + Math.random() * 3) + "s";
     
     document.body.appendChild(element);
     
     setTimeout(() => element.remove(), 6000);
   }, 500); 
 }
-
 function stopCustomRain() {
   clearInterval(customRainInterval);
   document.querySelectorAll(".custom-rain-item").forEach(el => el.remove());
