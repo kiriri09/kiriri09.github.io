@@ -1,0 +1,298 @@
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+      color: #333;
+      transition: background-color 0.4s ease;
+      overflow-x: hidden;
+    }
+    h2, h3, p {
+      margin: 10px 0;
+    }
+    .screen {
+      display: none;
+      width: 90%;
+      max-width: 420px;
+    }
+    .active {
+      display: block;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #4cf8f8;
+      color: rgb(0, 0, 0);
+    }
+    button:hover {
+      background-color: #ff2b2b;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    .card-container {
+        position: relative;
+        display: inline-block; 
+        margin: 0 auto;
+    }
+
+    .esquina-decoracion {
+        position: absolute;
+        top: -80px; 
+        left: -800px; 
+        
+        width: 505px; 
+        z-index: -1;  
+        pointer-events: none;
+   
+        animation: fadeIn 0.8s ease;
+    }
+
+    .fondo {
+        /* 1. Ocupar toda la pantalla */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+
+        background: linear-gradient(to bottom, #a9f9ff 0%, #ffffff 80%);        
+        background-attachment: fixed;
+        margin: 0;
+    }
+
+   
+    .card {
+      position: relative;
+      z-index: 1;
+      background-color: white;
+      border-radius: 15px;
+      padding: 25px;    
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease;
+      text-align: left; 
+    }
+
+    .card-container2 {
+        position: relative;
+        display: inline-block; 
+        margin: 0 auto;
+    }
+
+    .card-container3 {
+    position: relative;
+    display: inline-block; 
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease;
+    }
+
+    /* El bloque blanco (la tarjeta) del inicio */
+    .card3 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        text-align: center; 
+        max-width: 450px;  
+        width: 380px;
+    }
+
+    .decoracion {
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 550px;
+
+        background-image: url("img/remolino.png");
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        background-size: contain;
+
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .main-img {
+      width: 280px;
+      height: auto;
+      margin-bottom: 15px;
+      object-fit: contain;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    #errorMessage {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 8px;
+    }
+
+    .card p {
+      text-align: justify;
+      line-height: 1.6;
+      font-size: 1em;
+      margin-top: 15px;
+    }
+
+
+    /* Sticker */
+    .sticker-container {
+    text-align: center;
+    margin: 1px 0; 
+    }
+
+    .sticker {
+        width: 200px; 
+        height: auto;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)); 
+        animation: floating 3s ease-in-out infinite;
+    }
+    
+
+    .contenedor-dual {
+      display: flex;
+      gap: 80px;            
+      justify-content: center;
+      align-items: center;
+      width: 100%;          
+      margin: 0 auto;
+      height: auto;        
+      min-height: 500px;
+      animation: fadeIn 0.8s ease;
+    }
+
+
+    .card-individual {
+        flex: 1;
+        min-width: 300px; 
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+        min-height: 400px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+   
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 360px; 
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carousel-track {
+      display: flex; 
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-track img {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0; 
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      color: white;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Animación de levitación */
+    @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    #letterScreen3 {
+    max-width: 1000px !important; 
+    width: 95%;
+    }
+    
+    /* corazones */
+    .heart {
+      position: fixed; 
+      bottom: -60px;
+      z-index: 1000;
+      pointer-events: none;
+      animation: floatUp linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* La clase para la nueva lluvia */
+    .custom-rain-item {
+    position: fixed;
+    top: -50px;
+    z-index: 999;
+    pointer-events: none;
+    animation: fall linear forwards; /* Usa la misma animación 'fall' que tus corazones */
+    }
+
+    /* Si no tienes definida la animación 'fall' en tu CSS, añádela así: */
+    @keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+    }
+
+

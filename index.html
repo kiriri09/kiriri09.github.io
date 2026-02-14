@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Regalito de San Valentín muak  </title>
+  <link rel="icon" type="image/png" href="img/sonic.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Pantalla de contraseña -->
+  <div class="screen active" id="passwordScreen">
+    <div class="fondo"></div>
+    <div class="card-container3"> <div class="card3"> <h1>Pequeño Hyper tonto??</h1>    
+      <img src="img/hyper.png" alt="Inicio" class="main-img">
+      <h2> yyyy 06 + 01 no?</h2>
+      <input type="password" id="passwordInput" placeholder=" ... 🎸🎹 ">
+      <br>
+      <button onclick="checkPassword()">Entrar</button>
+      <p id="errorMessage"></p>
+    </div>
+    </div>
+  </div>
+
+  <div class="screen" id="menuScreen">
+    <h2>  Dedicado para ti, amorcito 🦈</h2>
+        <img src="img/kiri ramo.png" alt="Inicio" class="main-img">
+    <p>Elige lo que quieres abrir:</p>
+    <div class="btn-container">
+      <button onclick="showLetter()"> 1. yey 😭</button>
+      <button onclick="showLetter2()"> 2. yay 😡</button>
+      <button onclick="showLetter3()"> 3. Cositas</button>
+    </div>
+  </div>
+  
+  <div class="screen" id="letterScreen">
+    <div class="card-container"> <img src="img/pianomarco.png" class="esquina-decoracion">    <div class="card piano-letter">
+      <h3>Hola pequeño Hyper,</h3>
+      <p> Realmente no soy de palabras, ¿sabes?, pero realmente me gustas tanto 
+        que esto me nace. Desde que te conocí, nunca pensé en siquiera llegar a esto,
+        me divertía mucho hablando, jugando y viendo lo que me compartías. Creo que ninguno
+        de nosotros quiso esto, pero me gusta mucho como estamos ahora. No fue algo repentino,
+        ambos tuvimos nuestras dudas, pero nos compartíamos esas dudas y realmente apreciaba eso, 
+        lo veía un gesto íntimo, algo en lo cual concordabamos los dos, la manera de ver y tratar el amor. 
+      </p>
+     <p>Me gusta la forma en que piensas, en cómo hablas, en cómo te ríes (realmente me hace muy feliz escucharte así),
+        cómo tocas el piano, cómo juegas ajedrez, como te adaptas a otros juegos, como analizas cada canción, como me cuentas
+    cada cosa, cada juego, cada historia, cómo te encanta el celeste, las flores "no me olvides", los tiburones, las pociones, yyyy muchas cosas más que no te diré porque luego te harás engreído, muak.</p>
+     <p>Eres alguien muy especial para mí,  eres importante y te valoro muchísimo tanto como amigo y como pareja.</p>
+    <p>Te amo mucho, Francis.</p>
+      </p>
+      <button onclick="goBack()">Volver</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="screen" id="letterScreen2">
+    <div class="decoracion"></div>
+    <div class="card-container2">
+    <div class="card piano-letter">
+
+      <h3>Segunda notita, pequeño Hyper</h3>
+      <p>Realmente amo pasar tiempo contigo, me divierto un montón, jugar Sonic Unleashed, Sonic Adventure DX, el jueguito de 
+        Shadow, jugar Smash, me has hecho conocer tantas cosas, AMO dibujar a tu oc, a veces simplemente no hago nada y de la nada
+        me encuentro dibujando a tu oc con caras graciosas. También cuando escucho música te recuerdo demasiado
+        , preguntándome que estarás haciendo, AMO decirte cosas cariñosas.</p>
+      <p> Me gusta mucho que simplemente nos como "representemos" como Shadow y Sonic, no sabes cuánto significa para mí. </p>
+        <div class="sticker-container">
+            <img src="img/Shadowflor.png" class="sticker">
+        </div>
+      <p> En fin, hice esta playlist que por ahora tiene esa cantidad de canciones, pero las puse porque me recordaban a ti 🏹🦈. </p>
+      <p> 🎹࣪ https://sptfy.es/1nv 🎹࣪</p>
+      <button onclick="goBack2()">Volver</button>
+    </div> 
+    </div>
+  </div>
+
+  <div class="screen" id="letterScreen3">
+      <div class="contenedor-dual">
+          <div class="card-individual">
+              <h3>Recuerditos de juegos 🥳🎯 </h3>
+              <h3></h3>
+              <div class="carousel">
+                  <div class="carousel-track" id="carouselTrack1">
+                      <img src="img/image1.png">
+                      <img src="img/4.png">
+                      <img src="img/image.png">
+                      <img src="img/5.png">
+                      <img src="img/6.png">
+                      <img src="img/7.png">
+                      <img src="img/8.png">
+                      <img src="img/9.png">
+                      <img src="img/10.png">
+                      <img src="img/11.png">
+                      <img src="img/12.png">
+                      <img src="img/13.png">
+                      <img src="img/14.png">
+                      <img src="img/15.png">
+                      <img src="img/16.png">
+                      <img src="img/17.png">
+                      <img src="img/18.png">
+                      <img src="img/19.png">
+                      <img src="img/20.png">
+                      <img src="img/21.png">
+                      <img src="img/22.png">
+                      <img src="img/23.png">
+                      <img src="img/mine.png">
+                      <img src="img/24.png">
+                      <img src="img/25.png">
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveSlide1(-1)">&#10094;</button>
+                  <button class="carousel-btn next" onclick="moveSlide1(1)">&#10095;</button>
+              </div>
+          </div>
+
+          <div class="card-individual">
+              <h3>Dibujitos que hice pensando en ti 🐦🦈</h3>
+              <h3></h3>
+              <div class="carousel">
+                  <div class="carousel-track" id="carouselTrack2">
+                      <img src="hyper/1.jpeg">
+                      <img src="hyper/2.jpeg">
+                      <img src="hyper/3.png">
+                      <img src="hyper/4.png">
+                      <img src="hyper/5.jpeg">
+                      <img src="hyper/di2.png">
+                      <img src="hyper/di3.png">
+                      <img src="hyper/6.jpeg">
+                      <img src="hyper/7.jpeg">
+                      <img src="hyper/8.jpeg">
+                      <img src="hyper/9.jpeg">
+                      <img src="hyper/10.png">
+                      <img src="hyper/11.png">
+                      <img src="hyper/12.png">
+                      <img src="hyper/13.jpeg">
+                      <img src="hyper/14.png">
+                      <img src="hyper/15.jpeg">
+                      <img src="hyper/16.jpeg">
+                      <img src="hyper/17.jpeg">
+                      <img src="hyper/san valentin.jpeg">
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveSlide2(-1)">&#10094;</button>
+                  <button class="carousel-btn next" onclick="moveSlide2(1)">&#10095;</button>
+              </div>
+          </div>
+      </div>
+      <button onclick="goBack3()">Volver</button>
+      <a href="https://www.rosify.org/rose/d5b7r6kz8">
+        <button> 🌹 </button>
+      </a>
+  </div>
+  <script src="script.js"></script>
+  
+</body>
+</html>
